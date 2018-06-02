@@ -13,6 +13,7 @@
     require "ICMS.php";
     require "ISS.php";
     require "KCV.php";
+    require "ICCC.php";
 
     $reforma = new Orcamento(500);
 
@@ -27,5 +28,9 @@
     echo "</br>";
 
     echo $calculadora->calcula($reforma,new KCV());
+
+    echo "</br>";
+
+    echo $calculadora->calcula($reforma,new ICCC());
 
 ?>
