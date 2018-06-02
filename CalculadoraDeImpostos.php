@@ -6,13 +6,14 @@
  * Date: 02/06/18
  * Time: 02:02
  */
+class CalculadoraDeImpostos
+{
 
-    class CalculadoraDeImpostos{
+    public function calcula(Orcamento $Orcamento, Imposto $imposto)
+    {
 
-        public function calcula(Orcamento $Orcamento,Imposto $imposto){
-
-            return $imposto->calcula($Orcamento);
-
-        }
+        return $imposto->calcula($Orcamento);
 
     }
+
+}

@@ -6,10 +6,11 @@
  * Date: 02/06/18
  * Time: 02:10
  */
-
-    class ISS implements Imposto {
-        public function calcula(Orcamento $Orcamento){
-            return $Orcamento->getValor() * 0.06;
-        }
-
+class ISS implements Imposto
+{
+    public function calcula(Orcamento $Orcamento)
+    {
+        return $Orcamento->getValor() * 0.10;
     }
+
+}

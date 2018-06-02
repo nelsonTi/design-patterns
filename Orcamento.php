@@ -6,16 +6,34 @@
  * Date: 02/06/18
  * Time: 02:01
  */
+class Orcamento
+{
 
-    class Orcamento {
+    private $valor;
+    private $itens;
 
-        private $valor;
 
-        function __construct($novoValor){
+    function __construct($novoValor)
+    {
         $this->valor = $novoValor;
-        }
+        $this->itens = array();
 
-        public function getValor(){
-            return $this->valor;
-        }
     }
+
+    public function addItem(Item $novoItem)
+    {
+        $this->itens[] = $novoItem;
+    }
+
+    public function getValor()
+    {
+        return $this->valor;
+    }
+
+    public function getItens()
+    {
+        return $this->itens;
+    }
+
+
+}

@@ -6,11 +6,9 @@
  * Date: 02/06/18
  * Time: 02:33
  */
+interface Imposto
+{
 
-    interface Imposto{
+    public function calcula(Orcamento $Orcamento);
 
-        public function calcula(Orcamento $Orcamento);
-
-    }
-
-    ?>
+}
