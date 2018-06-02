@@ -6,11 +6,19 @@
  * Date: 02/06/18
  * Time: 02:10
  */
-class ICMS implements Imposto
+class ICMS extends TemplateDeImpostoCondiconal
 {
 
-    public function calcula(Orcamento $Orcamento)
-    {
-        return ($Orcamento->getValor() * 0.05);
+    public  function deveUsarOMaximo(Orcamento $Orcamento){
+        return $Orcamento->getValor() >500;
     }
+
+    public  function taxacaoMinima(Orcamento $Orcamento){
+        return $Orcamento->getValor() * 0.05;
+    }
+
+    public  function taxacaoMaxima(Orcamento $Orcamento){
+        return $Orcamento->getValor() * 0.15;
+    }
+
 }

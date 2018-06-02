@@ -15,12 +15,13 @@
     require "CalculadoraDeImpostos.php";
     require "CalculadoraDeDescontos.php";
     require "Imposto.php";
+    require "TemplateDeImpostoCondiconal.php";
     require "ICMS.php";
     require "ISS.php";
     require "KCV.php";
     require "ICCC.php";
 
-    $reforma = new Orcamento(1200);
+    $reforma = new Orcamento(490);
 
     $calculadora = new CalculadoraDeImpostos();
 
@@ -50,6 +51,9 @@
     echo "</br>";
 
     $reforma->addItem(new Item("Tijolo",250));
+    $reforma->addItem(new Item("Cimento",250));
+    $reforma->addItem(new Item("Cimento",250));
+    $reforma->addItem(new Item("Cimento",250));
     $reforma->addItem(new Item("Cimento",250));
 
     echo $calculadoraDeDescontos->desconto($reforma);
