@@ -6,13 +6,17 @@
  * Date: 02/06/18
  * Time: 02:30
  */
-class KCV implements Imposto
+class KCV extends Imposto
 {
 
-    public
+    function __construct($imposto = null)
+    {
+        parent::__construct($imposto);
+    }
+
     function calcula(Orcamento $Orcamento)
     {
 
-        return $Orcamento->getValor() * 0.2;
+        return $Orcamento->getValor() * 0.2 + $this->calculaOutroImposto($Orcamento);
     }
 }

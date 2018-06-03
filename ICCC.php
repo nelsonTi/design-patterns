@@ -6,7 +6,7 @@
  * Date: 02/06/18
  * Time: 03:33
  */
-class ICCC implements Imposto
+class ICCC extends Imposto
 {
 
     public function calcula(Orcamento $Orcamento)

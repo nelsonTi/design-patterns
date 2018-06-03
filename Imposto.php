@@ -6,9 +6,24 @@
  * Date: 02/06/18
  * Time: 02:33
  */
-interface Imposto
+abstract class Imposto
 {
+    protected $outroImposto;
 
-    public function calcula(Orcamento $Orcamento);
+    function __construct($imposto = null){
+        $this->outroImposto = $imposto;
+
+    }
+
+   public abstract function calcula(Orcamento $Orcamento);
+
+
+    public function calculaOutroImposto(Orcamento $Orcamento)
+    {
+
+        if(is_null($this->outroImposto)) return 0;
+
+        return $this->outroImposto->calcula($Orcamento);
+    }
 
 }
